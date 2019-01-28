@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>フリーHTML5/CSS3ホームページテンプレート NO.006</title>
+<title>フリーHTML5/CSS3ホームページテンプレート NO.009</title>
 <meta name="viewport" content="width=device-width">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -12,32 +12,11 @@
 <script src="js/jquery.smoothscroll.js"></script>
 <script src="js/jquery.scrollshow.js"></script>
 <script src="js/jquery.rollover.js"></script>
-<script src="js/jquery.slidewide.js"></script>
 <script>
 $(function($){
 	$('html').smoothscroll({easing : 'swing', speed : 1000, margintop : 10, headerfix : $('header')});
 	$('.totop').scrollshow({position : 500});
-	$('.slide').slidewide({
-		touch         : true,
-		touchDistance : '80',
-		autoSlide     : true,
-		repeat        : true,
-		interval      : 3000,
-		duration      : 500,
-		easing        : 'swing',
-		imgHoverStop  : true,
-		navHoverStop  : true,
-		prevPosition  : 0,
-		nextPosition  : 0,
-		viewSlide     : 1,
-		baseWidth     : 980,
-		navImg        : false,
-		navImgCustom  : false,
-		navImgSuffix  : ''
-	});
-	$('.slidePrev img').rollover();
-	$('.slideNext img').rollover();
-	});
+});
 </script>
 <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
@@ -104,7 +83,7 @@ $(function($){
 					<ul>
 						<li><a href="sample.html">サンプル（2カラム）</a></li>
 						<li><a href="wide.html">サンプル（1カラム）</a></li>
-						<li><a href="sample.html#sample">ページ外リンク</a></li>
+						<li><a href="#sample">ページ内リンク</a></li>
 						<li class="subnav"><a href="sample.html">サブメニューリンク</a>
 							<ul>
 								<li><a href="index.html">サブメニュー</a></li>
@@ -119,56 +98,88 @@ $(function($){
 	</nav>
 </header>
 
-<div class="slide">
-	<ul class="slideInner">
-		<li><a href="index.html"><img src="images/photo01.jpg" alt=""></a></li>
-		<li><a href="index.html"><img src="images/photo02.jpg" alt=""></a></li>
-		<li><a href="index.html"><img src="images/photo03.jpg" alt=""></a></li>
-	</ul>
-	<div class="slidePrev"><img src="images/nav_prev.png" alt="前へ"></div>
-	<div class="slideNext"><img src="images/nav_next.png" alt="次へ"></div>
-	<div class="controlNav"></div>
-</div><!-- /.slide -->
+<div id="topicpath"><div class="inner"><a href="index.html">トップ</a> &gt; サンプルページ</div></div><!-- /#topicpath -->
+
+<h2>サンプルページ</h2>
 
 <div id="contents">
 	<div id="main">
-		<h3 id="news">新着情報</h3>
-		<dl class="info">
-			<dt><span>20XX-01-01</span></dt>
-			<dd>
-				 更新情報などを掲載するのに便利なデザインです。dlタグに『class="info"』を追加してください。
-			</dd>
-			<dt><span>20XX-01-01</span></dt>
-			<dd>
-				 更新情報などを掲載するのに便利なデザインです。
-			</dd>
+		<h3>ページ内リンクについて</h3>
+		<p>
+		ページ内リンクはスムーススクロールするようになっています。<br>
+		一方、他のページからページ内リンクした場合、一度ページのトップが表示されてからスムーススクロールするようになっています。<br>
+		トップページの一番右のメニューの「サンプル」＞「ページ外リンク」をクリックしてみてください。動作が確認できます。
+		</p>
+		<h3 id="sample">サンプルタグについて</h3>
+		<p>
+		以下、サンプルタグになります。ご利用の際は参考にしてみてください。
+		</p>
+		<p>
+		h2タグは、メニュー下部にある「サンプルページ」というテキスト部分になります。
+		</p>
+		<h3>h3タグ</h3>
+		<h4>h4タグ</h4>
+		<h5>h5タグ</h5>
+		<h6>h6タグ</h6>
+		<p>
+		<em>強調（em）</em>
+		<strong>より強い強調（strong）</strong>
+		<ins>追加（ins）</ins>
+		<del>削除（del）</del>
+		<a href="#">テキストアンカー</a>
+		</p>
+		<blockquote>
+		引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。引用部分です。
+		</blockquote>
+		<h3>リスト</h3>
+		<h4>普通のリスト</h4>
+		<ul>
+			<li>普通のリスト1</li>
+			<li>普通のリスト2</li>
+			<li>普通のリスト3</li>
+		</ul>
+		<h4>番号付きリスト</h4>
+		<ol>
+			<li>番号付きリスト1</li>
+			<li>番号付きリスト2</li>
+			<li>番号付きリスト3<br>li要素の中はブロックレベルのタグを使用することが出来ます。例えば、&lt;p&gt;タグも記述することが出来ます。<br></li>
+		</ol>
+		<h4>デザインリスト</h4>
+		<p>
+		このようにリストマークをチェックマークにしたい場合は、ulタグに『class="list"』を追記してください。
+		</p>
+		<ul class="list">
+			<li>デザインリスト1</li>
+			<li>デザインリスト2</li>
+			<li>デザインリスト3<br>li要素の中はブロックレベルのタグを使用することが出来ます。例えば、&lt;p&gt;タグも記述することが出来ます。<br></li>
+		</ul>
+		<h4>定義リスト</h4>
+		<dl>
+			<dt>定義リスト1</dt>
+			<dd>定義した用語の説明</dd>
+			<dt>定義リスト2</dt>
+			<dd>定義した用語の説明</dd>
+			<dt>定義リスト3</dt>
+			<dd>定義した用語の説明<br>dd要素の中はブロックレベルのタグを使用することが出来ます。例えば、&lt;p&gt;タグも記述することが出来ます。しかし、dt要素にはインライン要素しか記述することができません。</dd>
 		</dl>
-		<div class="col_two_one">
-			<h3>商品一覧</h3>
-			<ul>
-				<li>
-				<img src="images/photo.png" alt="">
-				<h4>商品名</h4>
-				<p>紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文</p>
-				</li>
-				<li>
-				<img src="images/photo.png" alt="">
-				<h4>商品名</h4>
-				<p>紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文</p>
-				</li>
-				<li>
-				<img src="images/photo.png" alt="">
-				<h4>商品名</h4>
-				<p>紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文</p>
-				</li>
-				 <li>
-				<img src="images/photo.png" alt="">
-				<h4>商品名</h4>
-				<p>紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文</p>
-				</li>
-			</ul>
-			<p class="textR"><a href="index.html">&raquo;もっと見る</a></p>
-		</div><!-- /.staff -->
+		<h3>テーブル</h3>
+		<table>
+			<tbody>
+			<tr><th>見出し1</th><th>見出し2</th><th>見出し3</th><th>見出し4</th><th>見出し5</th></tr>
+			<tr><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			</tbody>
+		</table>
+		<table>
+			<tbody>
+			<tr><th>見出し1</th><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><th>見出し2</th><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><th>見出し3</th><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><th>見出し4</th><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			<tr><th>見出し5</th><td>セル1</td><td>セル2</td><td>セル3</td><td>セル4</td><td>セル5</td></tr>
+			</tbody>
+		</table>
 	</div><!-- /#main -->
 	<div id="sub">
 		<h3>見出しh3タグ</h3>
